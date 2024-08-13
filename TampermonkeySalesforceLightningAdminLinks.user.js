@@ -5,7 +5,6 @@
 // @author        Sandeep Gaikwad
 // @updateURL     https://github.com/sandeep-mg/Tampermonkey-Salesforce-Lightning-Admin-Links/raw/main/TampermonkeySalesforceLightningAdminLinks.user.js
 // @downloadURL   https://github.com/sandeep-mg/Tampermonkey-Salesforce-Lightning-Admin-Links/raw/main/TampermonkeySalesforceLightningAdminLinks.user.js
-// @description   Tampermonkey Salesforce Lightning Admin Links
 // @match         https://*.lightning.force.com/*
 // @require       https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js
 // @require       https://gist.github.com/raw/2625891/waitForKeyElements.js
