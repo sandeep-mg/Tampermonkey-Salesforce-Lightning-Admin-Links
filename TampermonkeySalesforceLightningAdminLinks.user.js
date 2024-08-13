@@ -28,7 +28,8 @@ NOT USING lighting setup urls above YET because it SUCKS
 */
 	jNode.prepend (
 		'<span style="color:#ffffff;font-weight:bold;padding:0px;margin-top:3px;"><a href="https://mathworks.lightning.force.com/" style="color:#ffffff;">Home</a>&nbsp;|&nbsp;' +
-        '<a href="https://mathworks.lightning.force.com/lightning/setup/SetupOneHome/home" style="color:#ffffff;">Setup</a>&nbsp;|&nbsp;' +
+        	'<a href="https://mathworks.lightning.force.com/lightning/setup/SetupOneHome/home" style="color:#ffffff;">Setup</a>&nbsp;|&nbsp;' +
+		'<a target="_blank" href="chrome-extension://hpijlohoihegkfehhibggnkbjhoemldh/data-export.html?host=mathworks.my.salesforce.com&query" style="color:#ffffff;">Data Export</a>&nbsp;|&nbsp;' +		
 		'<a href="https://mathworks.lightning.force.com/lightning/setup/ObjectManager/home" style="color:#ffffff;">Objects</a>&nbsp;|&nbsp;' +
 		//'<a target="_blank" href="https://mathworks.my.salesforce.com/_ui/common/apex/debug/ApexCSIPage" style="color:#ffffff;">Console</a>&nbsp;|&nbsp;' +
 		//'<a href="/setup/ui/listApexTraces.apexp" style="color:#ffffff;">Logs</a>&nbsp;|&nbsp;' +
