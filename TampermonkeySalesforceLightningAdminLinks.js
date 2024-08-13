@@ -3,9 +3,9 @@
 // @description   Setup links to the top of all Lightning Salesforce pages
 // @version       1
 // @author        Sandeep Gaikwad
-// @updateURL    https://github.com/sandeep-mg/Tampermonkey-Salesforce-Lightning-Refresh-All-Reports/raw/main/RefreshSalesforceLightningReports.user.js
-// @downloadURL  https://github.com/sandeep-mg/Tampermonkey-Salesforce-Lightning-Refresh-All-Reports/raw/main/RefreshSalesforceLightningReports.user.js
-// @description  Refresh all reports on the Salesforce Homepage
+// @updateURL     https://github.com/sandeep-mg/Tampermonkey-Salesforce-Lightning-Admin-Links/raw/main/TampermonkeySalesforceLightningAdminLinks.user.js
+// @downloadURL   https://github.com/sandeep-mg/Tampermonkey-Salesforce-Lightning-Admin-Links/raw/main/TampermonkeySalesforceLightningAdminLinks.user.js
+// @description   Tampermonkey Salesforce Lightning Admin Links
 // @match         https://*.lightning.force.com/*
 // @require       https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js
 // @require       https://gist.github.com/raw/2625891/waitForKeyElements.js
