@@ -30,6 +30,12 @@ NOT USING lighting setup urls above YET because it SUCKS
         	'<a href="/lightning/setup/SetupOneHome/home" style="color:#ffffff;">Setup</a>&nbsp;|&nbsp;' +
 		'<a target="_blank" href="chrome-extension://hpijlohoihegkfehhibggnkbjhoemldh/data-export.html?host=mathworks.my.salesforce.com&query" style="color:#ffffff;">Data Export</a>&nbsp;|&nbsp;' +		
 		'<a href="/lightning/setup/ObjectManager/home" style="color:#ffffff;">Objects</a>&nbsp;|&nbsp;' +
+		'<a href="/lightning/setup/CustomSettings/home" style="color:#ffffff;">CS</a>&nbsp;|&nbsp;' +
+		'<a href="/lightning/setup/PermSets/home" style="color:#ffffff;">Perm Set</a>&nbsp;|&nbsp;' +
+		'<a href="/lightning/setup/ManageUsers/home" style="color:#ffffff;">Users</a>&nbsp;|&nbsp;' +
+		'<a href="/lightning/setup/EnhancedProfiles/home" style="color:#ffffff;">Profiles</a>&nbsp;|&nbsp;' +
+		'<a target="_blank" href="/HelpAndTrainingDoor?resource=https://help.salesforce.com/s/support&version=2" style="color:#ffffff;">Help</a>&nbsp;|&nbsp;' +
+		/*
 		//'<a target="_blank" href="https://mathworks.my.salesforce.com/_ui/common/apex/debug/ApexCSIPage" style="color:#ffffff;">Console</a>&nbsp;|&nbsp;' +
 		//'<a href="/setup/ui/listApexTraces.apexp" style="color:#ffffff;">Logs</a>&nbsp;|&nbsp;' +
 		//'<a href="/_ui/networks/setup/SetupNetworksPage" style="color:#ffffff;">Dig Ex</a>&nbsp;|&nbsp;' +
@@ -38,13 +44,9 @@ NOT USING lighting setup urls above YET because it SUCKS
 		//'<a href="/apexpages/setup/listApexPage.apexp" style="color:#ffffff;">Pages</a>&nbsp;|&nbsp;' +
 		//'<a href="/apexpages/setup/listAsyncApexJobs.apexp" style="color:#ffffff;">Jobs</a>&nbsp;|&nbsp;' +
 		//'<a href="/08e" style="color:#ffffff;">Sched</a>&nbsp;|&nbsp;' +
-		'<a href="/lightning/setup/CustomSettings/home" style="color:#ffffff;">CS</a>&nbsp;|&nbsp;' +
 		//'<a href="/_ui/platform/ui/schema/wizard/entity/CustomMetadataTypeListPage?setupid=CustomMetadata" style="color:#ffffff;">CMT</a>&nbsp;|&nbsp;' +
-		'<a href="/lightning/setup/PermSets/home" style="color:#ffffff;">Perm Set</a>&nbsp;|&nbsp;' +
-		'<a href="/lightning/setup/ManageUsers/home" style="color:#ffffff;">Users</a>&nbsp;|&nbsp;' +
-		'<a href="/lightning/setup/EnhancedProfiles/home" style="color:#ffffff;">Profiles</a>&nbsp;|&nbsp;' +
 		//'<a href="/one/one.app#/settings/personal/PersonalInformation/home" style="color:#ffffff;">MS</a>&nbsp;|&nbsp;' +
-		'<a target="_blank" href="/HelpAndTrainingDoor?resource=https://help.salesforce.com/s/support&version=2" style="color:#ffffff;">Help</a>&nbsp;|&nbsp;' +
+		*/
 		'<a href="/ltng/switcher?destination=classic" style="color:#ffffff;">Classic</a></span>&nbsp;&nbsp;'
 	);
 }
