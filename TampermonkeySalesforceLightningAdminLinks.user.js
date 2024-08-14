@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Tampermonkey Salesforce Lightning Admin Links
 // @description   Setup links to the top of all Lightning Salesforce pages
-// @version       1.3
+// @version       1.4
 // @author        Sandeep Gaikwad
 // @updateURL     https://github.com/sandeep-mg/Tampermonkey-Salesforce-Lightning-Admin-Links/raw/main/TampermonkeySalesforceLightningAdminLinks.user.js
 // @downloadURL   https://github.com/sandeep-mg/Tampermonkey-Salesforce-Lightning-Admin-Links/raw/main/TampermonkeySalesforceLightningAdminLinks.user.js
@@ -35,8 +35,9 @@ NOT USING lighting setup urls above YET because it SUCKS
 		'<a href="/lightning/setup/ManageUsers/home" style="color:#ffffff;">Users</a>&nbsp;|&nbsp;' +
 		'<a href="/lightning/setup/EnhancedProfiles/home" style="color:#ffffff;">Profiles</a>&nbsp;|&nbsp;' +
 		'<a target="_blank" href="/HelpAndTrainingDoor?resource=https://help.salesforce.com/s/support&version=2" style="color:#ffffff;">Help</a>&nbsp;|&nbsp;' +
+		'<a target="_blank" href="/_ui/common/apex/debug/ApexCSIPage" style="color:#ffffff;">Dev Console</a>&nbsp;|&nbsp;' +
 		/*
-		//'<a target="_blank" href="https://mathworks.my.salesforce.com/_ui/common/apex/debug/ApexCSIPage" style="color:#ffffff;">Console</a>&nbsp;|&nbsp;' +
+		
 		//'<a href="/setup/ui/listApexTraces.apexp" style="color:#ffffff;">Logs</a>&nbsp;|&nbsp;' +
 		//'<a href="/_ui/networks/setup/SetupNetworksPage" style="color:#ffffff;">Dig Ex</a>&nbsp;|&nbsp;' +
 		//'<a href="/01p" style="color:#ffffff;">Classes</a>&nbsp;|&nbsp;' +
