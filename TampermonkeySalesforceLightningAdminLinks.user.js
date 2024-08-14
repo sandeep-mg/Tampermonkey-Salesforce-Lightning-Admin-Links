@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Tampermonkey Salesforce Lightning Admin Links
 // @description   Setup links to the top of all Lightning Salesforce pages
-// @version       1.4
+// @version       1
 // @author        Sandeep Gaikwad
 // @updateURL     https://github.com/sandeep-mg/Tampermonkey-Salesforce-Lightning-Admin-Links/raw/main/TampermonkeySalesforceLightningAdminLinks.user.js
 // @downloadURL   https://github.com/sandeep-mg/Tampermonkey-Salesforce-Lightning-Admin-Links/raw/main/TampermonkeySalesforceLightningAdminLinks.user.js
