@@ -26,7 +26,7 @@ function addSetupLinks(jNode) {
 	NOT USING lighting setup urls above YET because it SUCKS
 	*/
 		jNode.prepend (
-			'<span style="color:#000000;font-weight:bold;padding:0px;margin-top:3px;"><a href="https://mathworks.lightning.force.com/" style="color:#000000;">Home</a>&nbsp;|&nbsp;' +
+			'<span style="color:#000000;font-weight:bold;padding:0px;margin-top:3px;"><a href="/" style="color:#000000;">Home</a>&nbsp;|&nbsp;' +
 			'<a href="/lightning/setup/SetupOneHome/home" style="color:#000000;">Setup</a>&nbsp;|&nbsp;' +
 			'<a target="_blank" href="chrome-extension://hpijlohoihegkfehhibggnkbjhoemldh/data-export.html?host=mathworks.my.salesforce.com&query" style="color:#ff0000;">Data Export</a>&nbsp;|&nbsp;' +		
 			'<a href="/lightning/setup/ObjectManager/home" style="color:#000000;">Objects</a>&nbsp;|&nbsp;' +
