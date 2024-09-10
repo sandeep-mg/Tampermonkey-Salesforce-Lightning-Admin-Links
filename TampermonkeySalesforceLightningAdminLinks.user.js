@@ -39,8 +39,8 @@ function addSetupLinks(jNode) {
 			'<a href="/ltng/switcher?destination=classic" style="color:#000000;">Classic</a>&nbsp;|&nbsp;'+
 	// Add Second Line
 			'<br>'+
-			'<a href="https://mathworks.lightning.force.com/lightning/app/06m31000000xJqUAAU" style="color:#000000;">Sales Console</a>&nbsp;|&nbsp;' +
-			'<a href="https://mathworks.lightning.force.com/lightning/app/06m31000000xJtzAAE" style="color:#000000;">Service Console</a>&nbsp;|&nbsp;'
+			'<a href="/lightning/app/06m31000000xJqUAAU" style="color:#000000;">Sales Console</a>&nbsp;|&nbsp;' +
+			'<a href="/lightning/app/06m31000000xJtzAAE" style="color:#000000;">Service Console</a>&nbsp;|&nbsp;'
 	/*		'<a href="/lightning/setup/ObjectManager/home" style="color:#000000;">Blank</a>&nbsp;|&nbsp;' +
 			'<a href="/lightning/setup/CustomSettings/home" style="color:#000000;">Blank</a>&nbsp;|&nbsp;' +
 			'<a href="/lightning/setup/PermSets/home" style="color:#000000;">Blank</a>&nbsp;|&nbsp;' +
