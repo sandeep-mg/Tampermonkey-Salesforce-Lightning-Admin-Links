@@ -40,7 +40,8 @@ function addSetupLinks(jNode) {
 	// Add Second Line
 			'<br>'+
 			'<a href="/lightning/app/06m31000000xJqUAAU" style="color:#000000;">Sales Console</a>&nbsp;|&nbsp;' +
-			'<a href="/lightning/app/06m31000000xJtzAAE" style="color:#000000;">Service Console</a>&nbsp;|&nbsp;'
+			'<a href="/lightning/app/06m31000000xJtzAAE" style="color:#000000;">Service Console</a>&nbsp;|&nbsp;'+
+			'<a href="/lightning/setup/DataManagementCreateTestInstance/home" style="color:#000000;">Sandboxes</a>&nbsp;|&nbsp;'
 	/*		'<a href="/lightning/setup/ObjectManager/home" style="color:#000000;">Blank</a>&nbsp;|&nbsp;' +
 			'<a href="/lightning/setup/CustomSettings/home" style="color:#000000;">Blank</a>&nbsp;|&nbsp;' +
 			'<a href="/lightning/setup/PermSets/home" style="color:#000000;">Blank</a>&nbsp;|&nbsp;' +
