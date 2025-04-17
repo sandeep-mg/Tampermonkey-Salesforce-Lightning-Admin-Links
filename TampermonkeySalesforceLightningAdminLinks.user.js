@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          Tampermonkey Salesforce Lightning Admin Links
 // @description   Setup links to the top of all Lightning Salesforce pages
-// @version       1.8
+// @version       1.9
 // @author        Sandeep Gaikwad
 // @updateURL     https://github.com/sandeep-mg/Tampermonkey-Salesforce-Lightning-Admin-Links/raw/main/TampermonkeySalesforceLightningAdminLinks.user.js
 // @downloadURL   https://github.com/sandeep-mg/Tampermonkey-Salesforce-Lightning-Admin-Links/raw/main/TampermonkeySalesforceLightningAdminLinks.user.js
@@ -66,4 +66,6 @@ function addSetupLinks(jNode) {
 	}
 
 	//waitForKeyElements("div[class='system-message level-info']", addSetupLinks);
-	waitForKeyElements("div[class='slds-button-group slds-global-actions__favorites oneFavorites']", addSetupLinks);
+	//waitForKeyElements("div[class='slds-button-group slds-global-actions__favorites oneFavorites']", addSetupLinks);
+	waitForKeyElements("div[class='slds-button-group-list slds-global-actions__favorites oneFavorites']", addSetupLinks);
+
