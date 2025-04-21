@@ -1,73 +1,102 @@
 // ==UserScript==
 // @name          Tampermonkey Salesforce Lightning Admin Links
 // @description   Setup links to the top of all Lightning Salesforce pages
-// @version       1.9
+// @version       2.0
 // @author        Sandeep Gaikwad
 // @updateURL     https://github.com/sandeep-mg/Tampermonkey-Salesforce-Lightning-Admin-Links/raw/main/TampermonkeySalesforceLightningAdminLinks.user.js
 // @downloadURL   https://github.com/sandeep-mg/Tampermonkey-Salesforce-Lightning-Admin-Links/raw/main/TampermonkeySalesforceLightningAdminLinks.user.js
 // @match         https://*.lightning.force.com/*
 // @match         https://*.salesforce-setup.com/*
+// @match         https://*.salesforce-setup.com/lightning/*
 // @require       https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js
 // @require       https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @grant         GM_addStyle
 // ==/UserScript==
 
+//Thanks to https://github.com/denverquentin/salesforce-userscripts
+
+GM_addStyle(`
+    .admin-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        padding: 2px 8px;
+        align-items: flex-start;
+        max-height: 50px;
+        font-family: 'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .admin-links .row {
+        display: flex;
+        gap: 1px;
+    }
+
+    .admin-links a {
+        color: #333;
+        text-decoration: none;
+        padding: 1px 4px;
+        border-radius: 2px;
+        font-size: 12px;
+        font-weight: bold;
+        transition: all 0.10s ease;
+    }
+
+    .admin-links a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: scale(1.10);
+    }
+
+    .admin-links .data-export {
+        color: #e74c3c;
+    }
+`);
+
+/* Styles for the admin navigation bar
+- Container (.admin-links): Sets base styling and font stack
+- Links (.admin-links a): Overrides default browser link colors
+*/
+
+/* Font-weight values:
+100 - Thin
+400 - Normal/Regular
+700 - Bold
+900 - Extra Bold
+
+Used for:
+- Creating visual hierarchy
+- Emphasizing important content
+- Making headlines stand out
+- Improving UI navigation elements
+*/
+/*
+-Insert your font in ".admin-links" Container
+-Apple's system font
+font-family: 'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+-Salesforce Lightning's default system font.
+font-family: 'Salesforce Sans', Arial, sans-serif;
+*/
 
 function addSetupLinks(jNode) {
-	/* these are lightning setup urls:
-	setup home - setup/one/one.app#/setup/home
-	apex classes - /one/one.app?source=aloha#/setup/ApexClasses/home
-	debug logs - /one/one.app?source=aloha#/setup/ApexDebugLogs/home
-	apex jobs - /one/one.app?source=aloha#/setup/AsyncApexJobs/home
-	vf pages - /one/one.app?source=aloha#/setup/ApexPages/home
-	custom settings - /one/one.app?source=aloha#/setup/CustomSettings/home
-	users - /one/one.app?source=aloha#/setup/ManageUsers/home
-	profiles - /one/one.app?source=aloha#/setup/EnhancedProfiles/home
+    jNode.prepend(`
+        <span class="admin-links">
+            <div class="row">
+                <a href="/">Home</a>
+                <a href="/lightning/setup/SetupOneHome/home">Setup</a>
+                <a href="chrome-extension://hpijlohoihegkfehhibggnkbjhoemldh/data-export.html?host=mathworks.my.salesforce.com&query" class="data-export" target="_blank">Data Export</a>
+                <a href="/lightning/setup/ObjectManager/home">Objects</a>
+                <a href="/lightning/setup/CustomSettings/home">CS</a>
+                <a href="/lightning/setup/PermSets/home">Perm Set</a>
+                <a href="/lightning/setup/ManageUsers/home">Users</a>
+                <a href="/lightning/setup/EnhancedProfiles/home">Profiles</a>
+                <a target="_blank" href="/HelpAndTrainingDoor?resource=https://help.salesforce.com/s/support&version=2">Help</a>
+                <a target="_blank" href="/_ui/common/apex/debug/ApexCSIPage">Dev Console</a>
+                <a href="/ltng/switcher?destination=classic">Classic</a>
+                <a href="/lightning/app/06m31000000xJqUAAU">Sales Console</a>
+                <a href="/lightning/app/06m31000000xJtzAAE">Service Console</a>
+                <a href="/lightning/setup/DataManagementCreateTestInstance/home">Sandboxes</a>
+            </div>
+        </span>
+    `);
+}
 
-	NOT USING lighting setup urls above YET because it SUCKS
-	*/
-		jNode.prepend (
-			'<span style="color:#000000;font-weight:bold;padding:0px;margin-top:3px;"><a href="/" style="color:#000000;">Home</a>&nbsp;|&nbsp;' +
-			'<a href="/lightning/setup/SetupOneHome/home" style="color:#000000;">Setup</a>&nbsp;|&nbsp;' +
-			'<a target="_blank" href="chrome-extension://hpijlohoihegkfehhibggnkbjhoemldh/data-export.html?host=mathworks.my.salesforce.com&query" style="color:#ff0000;">Data Export</a>&nbsp;|&nbsp;' +
-			'<a href="/lightning/setup/ObjectManager/home" style="color:#000000;">Objects</a>&nbsp;|&nbsp;' +
-			'<a href="/lightning/setup/CustomSettings/home" style="color:#000000;">CS</a>&nbsp;|&nbsp;' +
-			'<a href="/lightning/setup/PermSets/home" style="color:#000000;">Perm Set</a>&nbsp;|&nbsp;' +
-			'<a href="/lightning/setup/ManageUsers/home" style="color:#000000;">Users</a>&nbsp;|&nbsp;' +
-			'<a href="/lightning/setup/EnhancedProfiles/home" style="color:#000000;">Profiles</a>&nbsp;|&nbsp;' +
-			'<a target="_blank" href="/HelpAndTrainingDoor?resource=https://help.salesforce.com/s/support&version=2" style="color:#000000;">Help</a>&nbsp;|&nbsp;' +
-			'<a target="_blank" href="/_ui/common/apex/debug/ApexCSIPage" style="color:#000000;">Dev Console</a>&nbsp;|&nbsp;' +
-			'<a href="/ltng/switcher?destination=classic" style="color:#000000;">Classic</a>&nbsp;|&nbsp;'+
-	// Add Second Line
-			'<br>'+
-			'<a href="/lightning/app/06m31000000xJqUAAU" style="color:#000000;">Sales Console</a>&nbsp;|&nbsp;' +
-			'<a href="/lightning/app/06m31000000xJtzAAE" style="color:#000000;">Service Console</a>&nbsp;|&nbsp;'+
-			'<a href="/lightning/setup/DataManagementCreateTestInstance/home" style="color:#000000;">Sandboxes</a>&nbsp;|&nbsp;'
-	/*		'<a href="/lightning/setup/ObjectManager/home" style="color:#000000;">Blank</a>&nbsp;|&nbsp;' +
-			'<a href="/lightning/setup/CustomSettings/home" style="color:#000000;">Blank</a>&nbsp;|&nbsp;' +
-			'<a href="/lightning/setup/PermSets/home" style="color:#000000;">Blank</a>&nbsp;|&nbsp;' +
-			'<a href="/lightning/setup/ManageUsers/home" style="color:#000000;">Blank</a>&nbsp;|&nbsp;' +
-			'<a href="/lightning/setup/EnhancedProfiles/home" style="color:#000000;">Blank</a>&nbsp;|&nbsp;' +
-			'<a target="_blank" href="/HelpAndTrainingDoor?resource=https://help.salesforce.com/s/support&version=2" style="color:#000000;">Blank</a>&nbsp;|&nbsp;' +
-			'<a target="_blank" href="/_ui/common/apex/debug/ApexCSIPage" style="color:#000000;">Blank</a></span>&nbsp;|&nbsp;'
-	*/
-	/*
-			//'<a href="/setup/ui/listApexTraces.apexp" style="color:#000000;">Logs</a>&nbsp;|&nbsp;' +
-			//'<a href="/_ui/networks/setup/SetupNetworksPage" style="color:#000000;">Dig Ex</a>&nbsp;|&nbsp;' +
-			//'<a href="/01p" style="color:#000000;">Classes</a>&nbsp;|&nbsp;' +
-			//'<a href="/ui/setup/apex/ApexTestQueuePage" style="color:#000000;">Tests</a>&nbsp;|&nbsp;' +
-			//'<a href="/apexpages/setup/listApexPage.apexp" style="color:#000000;">Pages</a>&nbsp;|&nbsp;' +
-			//'<a href="/apexpages/setup/listAsyncApexJobs.apexp" style="color:#000000;">Jobs</a>&nbsp;|&nbsp;' +
-			//'<a href="/08e" style="color:#000000;">Sched</a>&nbsp;|&nbsp;' +
-			//'<a href="/_ui/platform/ui/schema/wizard/entity/CustomMetadataTypeListPage?setupid=CustomMetadata" style="color:#000000;">CMT</a>&nbsp;|&nbsp;' +
-			//'<a href="/one/one.app#/settings/personal/PersonalInformation/home" style="color:#000000;">MS</a>&nbsp;|&nbsp;' +
-	*/
-		);
-	}
-
-	//waitForKeyElements("div[class='system-message level-info']", addSetupLinks);
-	//waitForKeyElements("div[class='slds-button-group slds-global-actions__favorites oneFavorites']", addSetupLinks);
-	waitForKeyElements("div[class='slds-button-group-list slds-global-actions__favorites oneFavorites']", addSetupLinks);
-
-	//Thanks to https://github.com/denverquentin/salesforce-userscripts
-
+waitForKeyElements("div[class='slds-button-group-list slds-global-actions__favorites oneFavorites']", addSetupLinks);
