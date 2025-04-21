@@ -69,3 +69,5 @@ function addSetupLinks(jNode) {
 	//waitForKeyElements("div[class='slds-button-group slds-global-actions__favorites oneFavorites']", addSetupLinks);
 	waitForKeyElements("div[class='slds-button-group-list slds-global-actions__favorites oneFavorites']", addSetupLinks);
 
+	//Thanks to https://github.com/denverquentin/salesforce-userscripts
+
