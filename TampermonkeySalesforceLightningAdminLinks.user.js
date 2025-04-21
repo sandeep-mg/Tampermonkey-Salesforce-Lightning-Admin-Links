@@ -42,8 +42,8 @@ GM_addStyle(`
     }
 
     .admin-links a:hover {
-        background: rgba(255, 255, 255, 0.1);
-        transform: scale(1.10);
+        background: linear-gradient(45deg, rgba(255,136,37,0.7), rgba(255,136,37,1));
+         transform: translateY(-2px);
     }
 
     .admin-links .data-export {
